@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   purge: [],
   target: 'relaxed',
@@ -5,6 +7,11 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
+    extend: {
+      fontFamily: {
+        mono: ['PT Mono', ...defaultTheme.fontFamily.mono]
+      }
+    },
     screens: {
       sm: '640px',
       md: '768px',
