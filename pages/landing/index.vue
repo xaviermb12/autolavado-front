@@ -1,5 +1,8 @@
 <template>
   <section class="container">
+    <div class="w-full">
+      <a-nav-bar />
+    </div>
     <div class="grid grid-cols-3 gap-8">
       <div class="col-span-1 bg-gray-200 px-4 pb-12">
         <Logo width="100%" height="250" />
@@ -31,10 +34,12 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import ANavBar from '~/components/landing/ANavBar'
 
 export default {
   components: {
-    Logo
+    Logo,
+    ANavBar
   }
 }
 </script>
