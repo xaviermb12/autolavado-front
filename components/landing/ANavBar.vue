@@ -1,6 +1,8 @@
 <template>
   <div>
-    navbar
+    <span class="font-mono">
+      Prueba navbar con font de google
+    </span>
   </div>
 </template>
 
