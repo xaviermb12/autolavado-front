@@ -23,7 +23,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['vuesax/dist/vuesax.css'],
+  css: ['vuesax/dist/vuesax.css', '~assets/css/tailwind.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -33,7 +33,8 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss'
   ],
   /*
    ** Nuxt.js modules
@@ -54,6 +55,16 @@ export default {
    ** Build configuration
    */
   build: {
+    postcss: {
+      plugins: {
+        'postcss-import': {},
+        tailwindcss: './tailwind.config.js',
+        'postcss-nested': {}
+      }
+    },
+    preset: {
+      stage: 1 // see https://tailwindcss.com/docs/using-with-preprocessors#future-css-featuress
+    },
     /*
      ** You can extend webpack config here
      */
