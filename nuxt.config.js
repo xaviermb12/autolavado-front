@@ -44,8 +44,14 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    'nuxt-webfontloader'
   ],
+  webfontloader: {
+    google: {
+      families: ['Lato:400,700'] //Loads Lato font with weights 400 and 700
+    }
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
